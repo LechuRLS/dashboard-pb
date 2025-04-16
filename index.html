@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Bienvenido a tu Dashboard</h1>
+
+    <div class="modules">
+      <a href="pages/clock.html" class="card">
+        Reloj Digital
+      </a>
+      <a href="pages/weather.html" class="card">
+        Estación Meteorológica
+      </a>
+      <a href="pages/password.html" class="card">
+        Generador de Contraseñas
+      </a>
+      <a href="pages/links.html" class="card">
+        Tus Links Guardados
+      </a>
+    </div>
+  </div>
+  <div class="widgets">
+   <section id="modulo-reloj" class="widget">
+    <h2>Reloj Digital</h2>
+    <div id="clock">00:00:00</div>
+    <div id="date">DD/MM/AAAA</div>
+    <p id="message"></p>
+   </section>
+
+   <section id="modulo-clima" class="widget">
+    <h2>Estación Meteorológica</h2>
+    
+    <div class="input-group">
+      <input type="text" id="city" placeholder="Introduce una ciudad" value="Madrid">
+      <button id="getWeather">Ver clima</button>
+      <button id="closeWeather" style="display: none;">Cerrar clima</button>
+    </div>
+  
+    <div id="weather"></div>
+   </section>  
+
+   <section class="widget">
+    <h2>Generador de Contraseñas</h2>
+  
+    <div class="input-group">
+      <label for="length">Longitud de la contraseña (12 - 50):</label>
+      <input type="number" id="length" min="12" max="50" value="16" />
+      <button id="generate">Generar Contraseña</button>
+    </div>
+  
+    <div id="result">
+      <p><strong>Contraseña generada:</strong></p>
+      <div class="password-wrapper">
+        <input type="text" id="password" readonly />
+        <button id="copyPassword">📋</button>
+      </div>
+      <div id="copy-msg" class="copy-message"></div>
+    </div>
+    
+   </section>
+
+   <section id="modulo-links" class="widget">
+    <h2>Tus Links Guardados</h2>
+  
+    <div class="input-group">
+      <input type="text" id="link-title" placeholder="Título del link">
+      <input type="url" id="link-url" placeholder="URL (https://...)">
+      <button id="add-link">Añadir Link</button>
+    </div>
+  
+    <ul id="links-list"></ul>
+    <button id="clear-all-links" style="margin-top: 15px;">Borrar todos los links</button>
+   </section>     
+  </div>
+  <script src="JavaScript/background.js"></script>
+  <script src="JavaScript/index-clock.js"></script>
+  <script src="JavaScript/index-weather.js"></script>
+  <script src="JavaScript/index-password.js"></script>
+  <script src="JavaScript/index-links.js"></script>
+
+</body>
+</html>
+ 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estación Meteorológica</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <section class="container">
+    <h2>Estación Meteorológica</h2>
+  
+    <div class="input-group">
+      <input type="text" id="city" placeholder="Introduce una ciudad" value="Madrid">
+      <button id="getWeather">Ver clima</button>
+      <button id="closeWeather" style="display: none;">Cerrar clima</button>
+    </div>
+  
+    <div id="weather"></div>
+  </section>
+  
+
+  <script src="../JavaScript/weather.js"></script>
+  <script src="../JavaScript/background.js"></script>
+
+  <a href="../index.html" class="back-button">⬅️ Volver al Dashboard</a>
+
+</body>
+</html>
